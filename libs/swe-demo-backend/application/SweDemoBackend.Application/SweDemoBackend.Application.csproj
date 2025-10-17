@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\contracts\SweDemoBackend.Contracts\SweDemoBackend.Contracts.csproj" />
+    <ProjectReference Include="..\..\domain\SweDemoBackend.Domain\SweDemoBackend.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
