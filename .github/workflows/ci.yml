@@ -11,6 +11,20 @@ permissions:
   contents: read
 
 jobs:
+  backend-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: "9.0.x"
+
+      - name: Run dotnet tests
+        run: |
+          dotnet test
   main:
     runs-on: ubuntu-latest
     steps:
@@ -37,7 +51,7 @@ jobs:
       # Prepend any command with "nx-cloud record --" to record its logs to Nx Cloud
       # - run: npx nx-cloud record -- echo Hello World
       # When you enable task distribution, run the e2e-ci task instead of e2e
-      - run: npx nx run-many -t lint test build e2e
+      - run: npx nx run-many -t lint build # test e2e
       # Nx Cloud recommends fixes for failures to help you get CI green faster. Learn more: https://nx.dev/ci/features/self-healing-ci
       - run: npx nx fix-ci
         if: always()

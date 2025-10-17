@@ -10,4 +10,8 @@ import { NavbarContainer } from "@swe-demo/swe-demo-feature";
 })
 export class App {
   protected title = "swe-demo";
+
+  constructor() {
+    console.log(import.meta.env['NG_APP_TEST_VALUE']);
+  }
 }

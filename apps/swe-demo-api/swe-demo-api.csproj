@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>swe_demo_api</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DotNetEnv" Version="3.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.9">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="9.0.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\libs\swe-demo-backend\application\SweDemoBackend.Application\SweDemoBackend.Application.csproj" />
+    <ProjectReference Include="..\..\libs\swe-demo-backend\contracts\SweDemoBackend.Contracts\SweDemoBackend.Contracts.csproj" />
+    <ProjectReference Include="..\..\libs\swe-demo-backend\infrastructure\SweDemoBackend.Infrastructure\SweDemoBackend.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
