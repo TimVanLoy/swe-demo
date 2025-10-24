@@ -68,10 +68,10 @@ jobs:
 
       - name: Create .env file
         run: |
-          touch ./apps.swe-demo-app/.env
-          echo NG_APP_TEST_VALUE="Testvalue from deploy" >> ./apps.swe-demo-app/.env
-          echo NG_APP_LEGO_API_URL=${{ secrets.API_URL }} >> ./apps.swe-demo-app/.env
-          cat ./apps.swe-demo-app/.env # Print for debugging
+          touch ./apps/swe-demo-app/.env
+          echo NG_APP_TEST_VALUE="Testvalue from deploy" >> ./apps/swe-demo-app/.env
+          echo NG_APP_LEGO_API_URL=${{ secrets.API_URL }} >> ./apps/swe-demo-app/.env
+          cat ./apps/swe-demo-app/.env # Print for debugging
 
       - name: Build app
         run: |
