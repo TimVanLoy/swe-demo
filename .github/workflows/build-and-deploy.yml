@@ -89,6 +89,3 @@ jobs:
         with:
           app-name: ${{ secrets.AZURE_WEBAPP_CLIENT_NAME }}
           package: ./dist/apps/swe-demo-app/browser
-
-
-
